@@ -1,0 +1,277 @@
+body {
+  background: linear-gradient(75deg,#2980b9,#8e44ad);
+  color: white;
+  font-family: arial;
+}
+h1{
+  margin-top: 18%;
+}
+body header {
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+body header .timer {
+  position: absolute;
+  top: 14%;
+  left: 3%;
+  font-size: 23px;
+  background: #FFAD29;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  border-radius: 4vh;
+  text-align: center;
+}
+body header .score {
+  position: absolute;
+  top: 14%;
+  left: 80%;
+  font-size: 23px;
+  background: #FFAD29;
+  width: 16vh;
+  height: 8vh;
+  line-height: 8vh;
+  border-radius: 2vh;
+  text-align: center;
+}
+
+
+.game {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+@media screen and (min-width: 20em) {
+  .game {
+    width: 400px;
+  }
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  height: 22%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 23%;
+  float: left;
+  border-radius: 12px;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  position: relative;
+}
+.flipper .front, .flipper .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: #FFCCA9 0 8px 2px;
+}
+.flipper .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  background: #FF2151;
+}
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid #E8E8E8;
+}
+
+/* pictures */
+
+#piggy-bank {
+  background: white url("piggy-bank.png") no-repeat center;
+  background-size: contain;
+}
+
+#shoe {
+  background: white url("shoe.png") no-repeat center;
+  background-size: contain;
+}
+
+#plane {
+  background: white url("plane.png") no-repeat center;
+  background-size: contain;
+}
+
+#suitcase {
+  background: white url("suitcase.png") no-repeat center;
+  background-size: contain;
+}
+
+#robot {
+  background: white url("robot.png") no-repeat center;
+  background-size: contain;
+}
+
+#ring {
+  background: white url("ring.png") no-repeat center;
+  background-size: contain;
+}
+
+#palm-tree {
+  background: white url("palm-tree.png") no-repeat center;
+  background-size: contain;
+}
+
+#mp3 {
+  background: white url("mp3.png") no-repeat center;
+  background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+.click, .popup_box_LOST, .popup_box_WON{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.click{
+  background: #adbc29;
+  color: white;
+  font-size: 22px;
+  font-family: arial;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  border: 1px solid #0059b3;
+}
+.popup_box_LOST, .popup_box_WON{
+  width: 350px;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  z-index: 9999;
+  display: none;
+  /* opacity: 0; */
+}
+
+.popup_box_LOST, .popup_box_WON i{
+  font-size: 60px;
+  color: #eb9447;
+  border: 5px solid #eb9447;
+  padding: 20px 40px;
+  border-radius: 50%;
+  margin: -10px 0 20px 0;
+}
+.popup_box_LOST, .popup_box_WON h1{
+  font-size: 30px;
+  color: #1b2631;
+  margin-bottom: 5px;
+}
+.popup_box_LOST, .popup_box_WON label{
+  font-size: 23px;
+  color: #404040;
+}
+.popup_box_LOST, .popup_box_WON .btns{
+  margin: 40px 0 0 0;
+}
+.btns .btn1, .btns .btn2{
+  background:  #FFAD29;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #808080;
+  padding: 10px 13px;
+}
+.btns .btn2{
+  margin-left: 20px;
+  background: #ff3333;
+  border: 1px solid #cc0000;
+}
+.btns .btn1:hover{
+  transition: .5s;
+  background: #eb9447;
+}
+.btns .btn2:hover{
+  transition: .5s;
+  background: #e60000;
+}
+
+/* Added */
+.control-buttons {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(244, 3, 55, 0.8);
+}
+.control-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #36f4e4;
+  color: #FFF;
+  padding: 15px 25px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.info-container {
+  width:  430px;
+  margin: 20px auto 0;
+  margin-left: 0%;
+  background-color: #FFAD29;
+  padding: 20px;
+  font-size: 24px;
+  overflow: hidden;
+  border: 2px solid #e08c0c;
+  border-radius: 2vh;
+  text-align: center;
+}
+.info-container .name {
+  float: left;
+  /* width: 50%; */
+}
+
+
+/* Add end */
