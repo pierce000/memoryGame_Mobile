@@ -46,8 +46,8 @@ body header .score {
 }
 @media screen and (min-width: 20em) {
   .game {
-    height: 100vh;
-  }
+    width: 550px;
+
 }
 
 .flip-container {
@@ -179,7 +179,7 @@ body header .score {
   border: 1px solid #0059b3;
 }
 .popup_box_LOST, .popup_box_WON{
-  width: 100%;
+  width: 400px;
   background: #f2f2f2;
   text-align: center;
   align-items: center;
