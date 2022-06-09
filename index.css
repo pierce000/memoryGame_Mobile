@@ -44,7 +44,7 @@ body header .score {
   position: relative;
   margin: 0 auto;
 }
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 18.75em) {
   .game {
     width: 500px;
   }
