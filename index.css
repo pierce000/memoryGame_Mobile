@@ -180,6 +180,7 @@ body header .score {
 }
 .popup_box_LOST, .popup_box_WON{
   width: 700px;
+  left: 50%;
   background: #f2f2f2;
   text-align: center;
   align-items: center;
